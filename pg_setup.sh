@@ -2,9 +2,9 @@
 
 ## installs postgres, and sets up environment variables appropriately
 
-echo "export PG_DATA_DIR=/data/pg_data_dir" >> ~/.bashrc
-echo "export PGPORT=5432" >> ~/.bashrc
-echo "export PG_BUILD_DIR=/data/build" >> ~/.bashrc
+echo "export PG_DATA_DIR=/data/pg_data_dir" >> ~/.bashrc_exports
+echo "export PGPORT=5432" >> ~/.bashrc_exports
+echo "export PG_BUILD_DIR=/data/build" >> ~/.bashrc_exports
 
 # also, set these for the current run
 export PG_DATA_DIR=/data/pg_data_dir
@@ -31,14 +31,14 @@ cd /data/postgres
 make -j4 -s
 make install -j4 -s
 
-echo "export PG_BUILD_DIR=/data/build" >> ~/.bashrc
-echo "alias startpg=\"$PG_BUILD_DIR/bin/postgres -D $PG_DATA_DIR -p $PGPORT\"" >> ~/.bashrc
-echo "export PATH=$PG_BUILD_DIR/bin:$PATH" >> ~/.bashrc
+echo "export PG_BUILD_DIR=/data/build" >> ~/.bashrc_exports
+echo "alias startpg=\"$PG_BUILD_DIR/bin/postgres -D $PG_DATA_DIR -p $PGPORT\"" >> ~/.bashrc_exports
+echo "export PATH=$PG_BUILD_DIR/bin:$PATH" >> ~/.bashrc_exports
 export PATH=$PG_BUILD_DIR/bin:$PATH
 $PG_BUILD_DIR/bin/initdb -D $PG_DATA_DIR
 
-cp ~/setup_aws/postgresql.conf $PG_DATA_DIR/
-#source ~/.bashrc
+cp ~/postgres_setup_scripts/postgresql.conf $PG_DATA_DIR/
+source ~/.bashrc_exports
 
 pg_ctl -D $PG_DATA_DIR -l logfile start
 echo "started postgres"

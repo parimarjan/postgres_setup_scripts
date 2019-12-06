@@ -1,4 +1,4 @@
-#./disk_setup.sh
+./disk_setup.sh
 echo "disk setup done"
 sleep 3
 ./bootstrap.sh
@@ -7,8 +7,7 @@ sleep 3
 ./pg_setup.sh
 echo "postgres setup done"
 sleep 1
-#pg_ctl -D $PG_DATA_DIR -l logfile start
-echo "started postgres"
+source ~/.bashrc_exports
 
 createdb test
 sleep 3
@@ -19,4 +18,4 @@ sleep 3
 
 #sleep 3
 ./imdb_setup.sh
-cp ~/setup_aws/postgresql.conf $PG_DATA_DIR/
+cp ~/postgres_setup_scripts/postgresql.conf $PG_DATA_DIR/
