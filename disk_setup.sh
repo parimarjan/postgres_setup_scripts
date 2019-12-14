@@ -1,10 +1,9 @@
 #!/usr/bin/env bash
 
-## mounts /data/ on instance based ssd storage
-echo 'type=83' | sudo sfdisk /dev/nvme0n1
-sleep 3
-sudo mkfs.ext4 /dev/nvme0n1p1
-sudo mkdir -p /data/
-sudo mount /dev/nvme0n1p1 /data
-sudo chown $USER /data/
-
+diskname=$(lsblk | grep 69 | cut -f 1 -d " ")
+sudo rm -rf /pgfs
+sudo mkdir -m 777 /pgfs
+sudo mkfs -F -t ext4 /dev/$diskname
+sudo mount /dev/$diskname /pgfs
+sudo chmod 777 /pgfs/
+sudo chown $USER /pgfs/

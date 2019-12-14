@@ -2,17 +2,14 @@
 
 ## installs postgres, and sets up environment variables appropriately
 
-echo "export PG_DATA_DIR=/data/pg_data_dir" >> ~/.bashrc_exports
+echo "export PG_DATA_DIR=/pgfs/pg_data_dir" >> ~/.bashrc_exports
 echo "export PGPORT=5432" >> ~/.bashrc_exports
-echo "export PG_BUILD_DIR=/data/build" >> ~/.bashrc_exports
-
+echo "export PG_BUILD_DIR=/pgfs/build" >> ~/.bashrc_exports
+source ~/.bashrc_exports
 # also, set these for the current run
-export PG_DATA_DIR=/data/pg_data_dir
-export PGPORT=5432
-export PG_BUILD_DIR=/data/build
 
 # clone postgres, and checkout appropriate branch
-cd /data/
+cd /pgfs/
 git clone https://github.com/postgres/postgres.git
 cd postgres
 #git checkout REL_12_STABLE
@@ -27,11 +24,11 @@ flex bison libxml2-dev libxslt-dev libssl-dev
 
 # now we can compile postgres (just need to do this first time we're linking
 # with aqo)
-cd /data/postgres
+cd /pgfs/postgres
 make -j4 -s
 make install -j4 -s
 
-echo "export PG_BUILD_DIR=/data/build" >> ~/.bashrc_exports
+#echo "export PG_BUILD_DIR=/pgfs/build" >> ~/.bashrc_exports
 echo "alias startpg=\"$PG_BUILD_DIR/bin/postgres -D $PG_DATA_DIR -p $PGPORT\"" >> ~/.bashrc_exports
 echo "export PATH=$PG_BUILD_DIR/bin:$PATH" >> ~/.bashrc_exports
 export PATH=$PG_BUILD_DIR/bin:$PATH
