@@ -20,7 +20,7 @@ echo "source ~/.bashrc_exports" >> ~/.bashrc
 cd ~/
 git clone https://github.com/parimarjan/learned-cardinalities.git
 cd learned-cardinalities
-pip3 install -r requirements.txt
+pip3 install -r requirements_rt.txt
 
 #echo "export PGM_DIR=/home/ubuntu/learned-cardinalities/pgm/cpp/" >> ~/.bashrc_exports
 
