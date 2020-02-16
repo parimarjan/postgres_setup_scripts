@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-sudo apt-get update
-sudo apt install --assume-yes vim python3-pip cmake
-echo "source ~/.bashrc_exports" >> ~/.bashrc
+#sudo apt-get update
+#sudo apt install --assume-yes vim python3-pip cmake
+#echo "source ~/.bashrc_exports" >> ~/.bashrc
 
 # setup query-optimizer repo
 #cd ~/
