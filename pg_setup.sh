@@ -12,8 +12,8 @@ source ~/.bashrc_exports
 cd /pgfs/
 git clone https://github.com/postgres/postgres.git
 cd postgres
-git checkout REL_12_STABLE
-#git checkout REL_10_STABLE
+#git checkout REL_12_STABLE
+git checkout REL_10_STABLE
 
 sudo apt-get --assume-yes install libreadline-dev zlib1g-dev flex bison-devel \
   zlib-devel openssl-devel wget
