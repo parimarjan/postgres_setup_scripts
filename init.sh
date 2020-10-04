@@ -20,3 +20,5 @@ sleep 3
 #./imdb_setup.sh
 ./so_setup.sh
 cp ~/postgres_setup_scripts/postgresql.conf $PG_DATA_DIR/
+psql -d so < ~/postgres_setup_scripts/drop_indexes.sql
+psql -d so < ~/postgres_setup_scripts/create_indexes.sql
