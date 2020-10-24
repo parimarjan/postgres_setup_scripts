@@ -36,8 +36,9 @@ git clone https://github.com/parimarjan/sql_representation.git
 echo "export PYTHONPATH=\$PYTHONPATH:/home/ubuntu/park/:/home/ubuntu/sql_representation/" >> ~/.bashrc_exports
 
 cd ~/postgres_setup_scripts
-tar -xvf ./queries.tar.gz
-mv ./queries ~/learned-cardinalities/
+
+echo "export PYTHONPATH=\$PYTHONPATH:/home/ubuntu/learned-cardinalities/pgm/python" >> ~/.bashrc_exports
+echo "export LD_LIBRARY_PATH=\$LD_LIBRARY_PATH:/home/ubuntu/learned-cardinalities/pgm/cpp" >> ~/.bashrc_exports
 
 # TMP: just stuff for personal use
 cd ~/
@@ -45,5 +46,3 @@ git clone https://github.com/parimarjan/configs.git
 cd configs
 sh setup.sh
 cd ..
-echo "export PYTHONPATH=\$PYTHONPATH:/home/ubuntu/learned-cardinalities/pgm/python" >> ~/.bashrc_exports
-echo "export LD_LIBRARY_PATH=\$LD_LIBRARY_PATH:/home/ubuntu/learned-cardinalities/pgm/cpp" >> ~/.bashrc_exports
