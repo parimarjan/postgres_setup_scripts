@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 sudo apt-get update
-sudo apt install --assume-yes vim python3-pip cmake
+sudo apt install --assume-yes vim python3-pip cmake clang
 echo "source ~/.bashrc_exports" >> ~/.bashrc
 
 # setup query-optimizer repo
@@ -30,6 +30,9 @@ cd learned-cardinalities
 pip3 install -r requirements.txt
 
 echo "export PGM_DIR=/home/ubuntu/learned-cardinalities/pgm/cpp/" >> ~/.bashrc_exports
+
+cd ~/learned-cardinalities/flow_loss_cpp/
+make
 
 cd ~/
 git clone https://github.com/parimarjan/sql_representation.git
