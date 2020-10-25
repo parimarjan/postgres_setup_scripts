@@ -1,10 +1,7 @@
-./disk_setup.sh
-echo "disk setup done"
-sleep 3
-./bootstrap.sh
+./bootstrap_all.sh
 echo "bootstrap done"
 sleep 3
-./pg_setup.sh
+./pg_setup_local.sh
 echo "postgres setup done"
 sleep 1
 source ~/.bashrc_exports
