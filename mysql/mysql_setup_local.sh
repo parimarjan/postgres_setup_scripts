@@ -5,9 +5,9 @@ sudo apt-get install build-essential
 sudo apt install libmysqlclient-dev
 
 # install our forked version of mysql
-cd /pgfs/
-git clone https://github.com/parimarjan/mysql-server.git
-cd mysql-server
+#git clone https://github.com/parimarjan/mysql-server.git
+
+cd ~/mysql-server
 mkdir -p debug
 cd debug
 rm ../CMakeCache.txt
