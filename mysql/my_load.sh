@@ -1,1 +1,1 @@
-mysql -u root -ppassword -D imdb --local-infile=1 < test.sql
+mysql -u root -D imdb --local-infile=1 < test.sql
