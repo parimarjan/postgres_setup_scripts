@@ -12,10 +12,13 @@ mkdir -p debug
 cd debug
 rm ../CMakeCache.txt
 cmake .. -DWITH_DEBUG=1 -DDOWNLOAD_BOOST=1 -DWITH_BOOST=~/boost_1_69_0
-make -j 8
+make -j 2
 
-cd ../mysql-test
-./mysql-test-run.pl select_all
+#cd ../mysql-test
+#./mysql-test-run.pl select_all
 
 pip3 install mysqlclient
 
+# add to PATH maybe
+cd bin
+./mysqld --initialize-insecure
