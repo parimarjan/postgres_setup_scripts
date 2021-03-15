@@ -1,8 +1,8 @@
 
 sudo apt-get update
-sudo apt install libssl-dev libzstd-dev libncurses5-dev libreadline-dev bison pkg-config
-sudo apt-get install build-essential
-sudo apt install libmysqlclient-dev
+sudo apt install --assume-yes libssl-dev libzstd-dev libncurses5-dev libreadline-dev bison pkg-config
+sudo apt-get install --assume-yes build-essential
+sudo apt install --assume-yes libmysqlclient-dev
 
 # install our forked version of mysql
 cd /pgfs/
