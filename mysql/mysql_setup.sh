@@ -14,11 +14,13 @@ rm ../CMakeCache.txt
 cmake .. -DWITH_DEBUG=1 -DDOWNLOAD_BOOST=1 -DWITH_BOOST=~/boost_1_69_0
 make -j 2
 
-#cd ../mysql-test
-#./mysql-test-run.pl select_all
 
+echo "export PATH=\$PATH:/pgfs/mysql-server/debug/bin" >> ~/.bashrc
 pip3 install mysqlclient
 
 # add to PATH maybe
 cd bin
 ./mysqld --initialize-insecure
+./mysqld &
+echo "started mysqld, going to sleep to let it start"
+sleep 5
