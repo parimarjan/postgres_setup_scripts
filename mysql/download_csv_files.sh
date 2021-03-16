@@ -3,8 +3,8 @@ tar -xvf imdb.tgz
 mkdir -p csv_files
 mv *.csv csv_files/
 
-mysql -u root -ppassword < schematext.sql
+/pgfs/mysql-server/debug/bin/mysql -u root < schematext2.sql
 bash my_load.sh
-mysql -u root -ppassword -D imdb < create_indexes.sql
+/pgfs/mysql-server/debug/bin/mysql -u root -D imdb < create_indexes.sql
 
 

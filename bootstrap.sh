@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
 
-#sudo apt-get update
-#sudo apt install --assume-yes vim python3-pip cmake
-#echo "source ~/.bashrc_exports" >> ~/.bashrc
+sudo apt-get update
+sudo apt install --assume-yes vim python3-pip cmake
 
 # setup query-optimizer repo
 #cd ~/
@@ -20,6 +19,7 @@
 cd ~/
 git clone https://github.com/parimarjan/learned-cardinalities.git
 cd learned-cardinalities
+git checkout -t origin/vldb-rev
 pip3 install -r requirements_rt.txt
 
 #echo "export PGM_DIR=/home/ubuntu/learned-cardinalities/pgm/cpp/" >> ~/.bashrc_exports

@@ -1,9 +1,9 @@
 SET GLOBAL local_infile=1;
-set unique_checks = 0;
-set foreign_key_checks = 0;
-set sql_log_bin=0;
-set autocommit = 0;
-
+SET unique_checks=0;
+SET foreign_key_checks=0;
+SET sql_log_bin=0;
+SET autocommit=0;
+start transaction;
 LOAD DATA LOCAL INFILE 'csv_files/info_type.csv' INTO TABLE info_type FIELDS TERMINATED BY ',';
 LOAD DATA LOCAL INFILE 'csv_files/kind_type.csv' INTO TABLE kind_type FIELDS TERMINATED BY ',';
 LOAD DATA LOCAL INFILE 'csv_files/role_type.csv' INTO TABLE role_type FIELDS TERMINATED BY ',';
