@@ -14,14 +14,13 @@ CREATE INDEX movie_keyword1 ON movie_keyword(movie_id);
 CREATE INDEX movie_keyword2 ON movie_keyword(keyword_id);
 CREATE INDEX movie_companies1 ON movie_companies(company_id);
 CREATE INDEX movie_companies2 ON movie_companies(company_type_id);
--- CREATE INDEX movie_companies3 ON movie_companies(movie_id);
+CREATE INDEX movie_companies3 ON movie_companies(movie_id);
 
 CREATE INDEX ci1 ON cast_info(movie_id);
 CREATE INDEX ci2 ON cast_info(person_id);
 CREATE INDEX ci3 ON cast_info(role_id);
--- CREATE INDEX ci4 ON cast_info(person_role_id);
+CREATE INDEX ci4 ON cast_info(person_role_id);
 
 CREATE INDEX aka_name1 ON aka_name(person_id);
-
 CREATE INDEX pi1 ON person_info(info_type_id);
 CREATE INDEX pi2 ON person_info(person_id);
