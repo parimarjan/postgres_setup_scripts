@@ -5,6 +5,7 @@ mv *.csv csv_files/
 
 /pgfs/mysql-server/debug/bin/mysql -u root < schematext2.sql
 bash my_load.sh
+/pgfs/mysql-server/debug/bin/mysql -u root -D imdb < change_storage.sql
 /pgfs/mysql-server/debug/bin/mysql -u root -D imdb < create_indexes.sql
 
 

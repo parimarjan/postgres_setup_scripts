@@ -1,6 +1,6 @@
 bash disk_setup.sh
 echo "disk setup done!"
-./bootstrap.sh
+./bootstrap_all.sh
 echo "bootstrap done"
 sleep 3
 cd mysql
