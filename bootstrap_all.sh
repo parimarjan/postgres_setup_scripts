@@ -27,7 +27,8 @@ echo "export PYTHONPATH=\$PYTHONPATH:/home/ubuntu/park/:/home/ubuntu/gcn_pytorch
 cd ~/
 git clone https://github.com/parimarjan/learned-cardinalities.git
 cd learned-cardinalities
-pip3 install -r requirements.txt
+git checkout vldb-rev
+pip3 install -r requirements_rt.txt
 
 echo "export PGM_DIR=/home/ubuntu/learned-cardinalities/pgm/cpp/" >> ~/.bashrc_exports
 
