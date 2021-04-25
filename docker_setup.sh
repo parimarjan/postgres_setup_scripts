@@ -14,7 +14,7 @@ sudo docker build --build-arg LCARD_USER=${LCARD_USER} -t pg12 .
 sudo docker run --memory "512mb" --name card-db -p ${LCARD_PORT}:5432 -d pg12
 
 sudo docker restart card-db
-sudo docker exec -it card-db /imdb_setup.sh
+sudo docker exec -i card-db /imdb_setup.sh
 
 
 
