@@ -7,7 +7,7 @@ sudo ln -s /pgfs/docker/ /var/lib/docker
 sudo systemctl restart docker
 
 cd docker
-bash install.sh 512mb
+bash install.sh 256mb
 
 
 
