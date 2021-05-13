@@ -11,7 +11,13 @@ cd mysql-server
 mkdir -p debug
 cd debug
 rm ../CMakeCache.txt
-cmake .. -DWITH_DEBUG=1 -DDOWNLOAD_BOOST=1 -DWITH_BOOST=~/boost_1_69_0
+
+cd ~/
+wget -O ~/boost_tar.gz 'http://sourceforge.net/projects/boost/files/boost/1.73.0/boost_1_73_0.tar.bz2/download'
+tar -xvf boost_tar.gz
+
+cd /pgfs/mysql-server/debug
+cmake .. -DWITH_DEBUG=1 -DDOWNLOAD_BOOST=1 -DWITH_BOOST=~/boost_1_73_0
 make -j 2
 
 
