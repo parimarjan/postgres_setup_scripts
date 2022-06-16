@@ -1,10 +1,11 @@
+SIZE=$1
 ./disk_setup.sh
 echo "disk setup done"
 sleep 3
 ./bootstrap.sh
 echo "bootstrap done"
 sleep 3
-./docker_setup.sh
+./docker_setup.sh $SIZE
 
 #./pg_setup.sh
 #echo "postgres setup done"

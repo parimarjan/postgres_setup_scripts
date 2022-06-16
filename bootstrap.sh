@@ -2,6 +2,10 @@
 
 sudo apt-get update
 sudo apt install --assume-yes vim python3-pip cmake
+sudo apt-get install --assume-yes postgresql \
+                                  python-psycopg2 \
+                                  libpq-dev
+
 echo "source ~/.bashrc_exports" >> ~/.bashrc
 
 cd ~/
