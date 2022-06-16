@@ -8,7 +8,7 @@
 
 MB_SIZE=$1
 export LCARD_USER=ubuntu
-export LCARD_PORT=5432
+export LCARD_PORT=5433
 export IMAGE_NAME=card-db
 
 sudo docker build --build-arg LCARD_USER=${LCARD_USER} -t pg12 .  
