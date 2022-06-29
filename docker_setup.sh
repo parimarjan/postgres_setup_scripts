@@ -17,8 +17,14 @@ tar cvf postgres-13.1.tar.gz postgresql-13.1 && mv postgres-13.1.tar.gz dockerfi
 cd dockerfile
 sudo docker build -t ceb .
 rm -rf postgres-13.1.tar.gz
-## make sure port 5432 is not occupied
-sudo docker run --memory $MBSIZE --name card-db -p 5433:5432 -d ceb
+
+
+if [ $MBSIZE == "-1" ]
+then
+  sudo docker run --name card-db -p 5433:5432 -d ceb
+else
+  sudo docker run --memory $MBSIZE --name card-db -p 5433:5432 -d ceb
+fi
 #psql -d template1 -h localhost -U postgres
 
 sleep 120
