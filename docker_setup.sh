@@ -11,7 +11,7 @@ sudo systemctl restart docker
 #bash install.sh $MBSIZE
 cd ~/
 git clone https://github.com/Nathaniel-Han/End-to-End-CardEst-Benchmark.git
-cd End-to-End-CardEst-Benchmark
+cd ~/End-to-End-CardEst-Benchmark
 bash benchmark_builder.sh
 tar cvf postgres-13.1.tar.gz postgresql-13.1 && mv postgres-13.1.tar.gz dockerfile/
 cd dockerfile
@@ -27,6 +27,7 @@ else
 fi
 #psql -d template1 -h localhost -U postgres
 
+cd ~/End-to-End-CardEst-Benchmark
 sleep 120
 export PGPASSWORD=postgres
 sleep 2
