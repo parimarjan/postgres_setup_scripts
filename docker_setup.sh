@@ -18,7 +18,7 @@ cd dockerfile
 sudo docker build -t ceb .
 rm -rf postgres-13.1.tar.gz
 ## make sure port 5432 is not occupied
-sudo docker run --memory $MBSIZE --name ce-benchmark -p 5433:5432 -d ceb
+sudo docker run --memory $MBSIZE --name card-db -p 5433:5432 -d ceb
 #psql -d template1 -h localhost -U postgres
 
 sleep 120
