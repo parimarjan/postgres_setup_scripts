@@ -20,8 +20,18 @@ rm -rf postgres-13.1.tar.gz
 ## make sure port 5432 is not occupied
 sudo docker run --memory $MBSIZE --name ce-benchmark -p 5433:5432 -d ceb
 #psql -d template1 -h localhost -U postgres
+
+sleep 120
 export PGPASSWORD=postgres
+sleep 2
 createdb stats -U postgres -p 5433 -h localhost
+sleep 10
+psql -d stats -U postgres -p 5433 -h localhost < datasets/stats_simplified/stats.sql
+sleep 10
+psql -d stats -U postgres -p 5433 -h localhost < scripts/sql/stats_load.sql
+sleep 10
+psql -d stats -U postgres -p 5433 -h localhost < scripts/sql/stats_index.sql
+
 
 #template1=# create database stats
 #template1=# \c stats
