@@ -9,6 +9,3 @@ sudo systemctl restart docker
 
 cd docker
 bash install.sh $MBSIZE
-
-
-
