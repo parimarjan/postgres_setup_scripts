@@ -21,4 +21,4 @@ else
 fi
 
 sudo docker restart $IMAGE_NAME
-sudo docker exec -i $IMAGE_NAME /stack_setup.sh
+sudo docker exec -i $IMAGE_NAME /ergast_setup.sh
