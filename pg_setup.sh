@@ -2,18 +2,17 @@
 
 ## installs postgres, and sets up environment variables appropriately
 
-echo "export PG_DATA_DIR=/pgfs/pg_data_dir" >> ~/.bashrc_exports
+echo "export PG_DATA_DIR=/home/ubuntu/pg_data_dir" >> ~/.bashrc_exports
 echo "export PGPORT=5432" >> ~/.bashrc_exports
-echo "export PG_BUILD_DIR=/pgfs/build" >> ~/.bashrc_exports
+echo "export PG_BUILD_DIR=/home/ubuntu/build" >> ~/.bashrc_exports
 source ~/.bashrc_exports
 # also, set these for the current run
 
 # clone postgres, and checkout appropriate branch
-cd /pgfs/
+cd ~/
 git clone https://github.com/postgres/postgres.git
 cd postgres
 git checkout REL_12_STABLE
-#git checkout REL_10_STABLE
 
 sudo apt-get --assume-yes install libreadline-dev zlib1g-dev flex bison-devel \
   zlib-devel openssl-devel wget
@@ -24,9 +23,9 @@ flex bison libxml2-dev libxslt-dev libssl-dev
 
 # now we can compile postgres (just need to do this first time we're linking
 # with aqo)
-cd /pgfs/postgres
-make -j4 -s
-make install -j4 -s
+cd ~/postgres
+make -j 4 -s
+make install -j 4 -s
 
 #echo "export PG_BUILD_DIR=/pgfs/build" >> ~/.bashrc_exports
 echo "alias startpg=\"$PG_BUILD_DIR/bin/postgres -D $PG_DATA_DIR -p $PGPORT\"" >> ~/.bashrc_exports
