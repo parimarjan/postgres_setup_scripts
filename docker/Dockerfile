@@ -23,8 +23,8 @@ ADD install_pg_hint.sh /
 RUN chmod +x /install_pg_hint.sh
 RUN /install_pg_hint.sh
 
-ADD imdb_setup.sh /
-RUN chmod +x /imdb_setup.sh
+#ADD imdb_setup.sh /
+#RUN chmod +x /imdb_setup.sh
 ADD ergast_setup.sh /
 RUN chmod +x /ergast_setup.sh
 
