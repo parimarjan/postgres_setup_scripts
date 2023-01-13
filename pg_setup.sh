@@ -14,7 +14,7 @@ git clone https://github.com/postgres/postgres.git
 cd postgres
 git checkout REL_12_STABLE
 
-sudo apt-get --assume-yes install libreadline-dev zlib1g-dev flex bison-devel \
+sudo apt-get --assume-yes install libreadline-dev zlib1g-dev flex \
   zlib-devel openssl-devel wget
 sudo apt-get --assume-yes install build-essential libreadline-dev zlib1g-dev \
 flex bison libxml2-dev libxslt-dev libssl-dev
