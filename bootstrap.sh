@@ -4,6 +4,8 @@ sudo apt-get update
 sudo apt install --assume-yes vim python3-pip cmake
 echo "source ~/.bashrc_exports" >> ~/.bashrc
 
+sudo apt install --assume-yes sysstat
+
 #cd ~/
 #git clone https://github.com/parimarjan/learned-cardinalities.git
 #cd learned-cardinalities
