@@ -34,6 +34,10 @@ export PATH=$PG_BUILD_DIR/bin:$PATH
 $PG_BUILD_DIR/bin/initdb -D $PG_DATA_DIR
 
 cp ~/postgres_setup_scripts/postgresql.conf $PG_DATA_DIR/
+
+mkdir -p ~/payload/results
+cp ~/postgres_setup_scripts/postgresql.conf ~/payload/results/
+
 source ~/.bashrc_exports
 
 pg_ctl -D $PG_DATA_DIR -l logfile start
