@@ -18,4 +18,4 @@ pip3 install -r requirements.txt
 
 cd ~/
 mkdir -p payload/results
-sar -A -o payload/results/sar.log 10 2400 >/dev/null 2>&1 &
+sar -A -o payload/results/sar.log 10 24000 >/dev/null 2>&1 &
