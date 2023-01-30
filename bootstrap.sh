@@ -5,6 +5,7 @@ sudo apt install --assume-yes vim python3-pip cmake
 echo "source ~/.bashrc_exports" >> ~/.bashrc
 
 sudo apt install --assume-yes sysstat
+sudo apt install -y --assume-yes stress-ng
 
 #cd ~/
 #git clone https://github.com/parimarjan/learned-cardinalities.git
