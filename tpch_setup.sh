@@ -1,10 +1,11 @@
+source ~/.bashrc
 git clone https://github.com/gregrahn/tpch-kit.git
 cd tpch-kit/dbgen
 make
 
 createdb tpch
 psql tpch -f dss.ddl
-./dbgen -vf -s 1
+./dbgen -vf -s 10
 
 for i in `ls *.tbl`; do
   table=${i/.tbl/}
@@ -16,7 +17,7 @@ done
 
 mkdir /tmp/queries
 for i in `ls queries/*.sql`; do
-  tail -r $i | sed '2s/;//' | tail -r > /tmp/$i
+  tac "$i" | sed '2s/;//' | tac > /tmp/"$i"
 done
 
 DSS_QUERY=/tmp/queries ./qgen | sed 's/limit -1//' | sed 's/day (3)/day/' > queries.sql
