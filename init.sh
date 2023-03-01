@@ -17,5 +17,6 @@ sleep 3
 ./pg_hint_setup.sh
 
 #sleep 3
-./imdb_setup.sh
+#./imdb_setup.sh
 cp ~/postgres_setup_scripts/postgresql.conf $PG_DATA_DIR/
+./ergast_setup.sh
