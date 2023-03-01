@@ -19,4 +19,4 @@ sleep 3
 #sleep 3
 #./imdb_setup.sh
 cp ~/postgres_setup_scripts/postgresql.conf $PG_DATA_DIR/
-./ergast_setup.sh
+bash ergast_setup.sh
