@@ -15,7 +15,7 @@ for i in `ls *.tbl`; do
   psql tpch -c "\\copy $table FROM '/tmp/$i' CSV DELIMITER '|'"
 done
 
-mkdir /tmp/queries
+mkdir -p /tmp/queries
 for i in `ls queries/*.sql`; do
   tac "$i" | sed '2s/;//' | tac > /tmp/"$i"
 done
