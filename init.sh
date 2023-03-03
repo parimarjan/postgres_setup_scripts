@@ -17,10 +17,10 @@ sleep 3
 ./pg_hint_setup.sh
 
 #sleep 3
-./imdb_setup.sh
+#./imdb_setup.sh
 #bash ergast_setup.sh
 #bash stats_ceb_setup.sh
 #bash tpch_setup.sh
-#bash stack_setup.sh
+bash stack_setup.sh
 
 cp ~/postgres_setup_scripts/postgresql.conf $PG_DATA_DIR/
