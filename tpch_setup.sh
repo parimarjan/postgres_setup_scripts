@@ -22,6 +22,8 @@ done
 
 DSS_QUERY=/tmp/queries ./qgen | sed 's/limit -1//' | sed 's/day (3)/day/' > queries.sql
 
+cd ~/postgres_setup_scripts
+psql -d tpch < tpch_indexes.sql
 #psql tpch < queries.sql
 
 
