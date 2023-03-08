@@ -1,6 +1,6 @@
 source ~/.bashrc
 
-wget -O zdbs.tar.gz ...
+wget -O zdbs.tar.gz https://www.dropbox.com/s/pb413g1523882t7/zdbs.tar.gz?dl=1
 tar -xvf zdbs.tar.gz
 
 cd zdbs
