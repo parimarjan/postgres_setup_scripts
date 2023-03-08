@@ -5,8 +5,8 @@ tar -xvf zdbs.tar.gz
 
 cd zdbs
 
-createdb accident
-pg_restore -v -d accident ./accident.tar
+createdb accidents
+pg_restore -v -d accidents ./accidents.tar
 
 createdb financial
 pg_restore -v -d financial ./financial.tar
