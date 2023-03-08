@@ -1,0 +1,42 @@
+source ~/.bashrc
+
+wget -O zdbs.tar.gz ...
+tar -xvf zdbs.tar.gz
+
+cd zdbs
+
+createdb accident
+pg_restore -v -d accident ./accident.tar
+
+createdb financial
+pg_restore -v -d financial ./financial.tar
+
+createdb consumerexpenditure
+pg_restore -v -d consumerexpenditure ./consumerexpenditure.tar
+
+createdb seznam
+pg_restore -v -d seznam ./seznam.tar
+
+createdb ccs
+pg_restore -v -d ccs ./ccs.tar
+
+createdb visualgenome
+pg_restore -v -d visualgenome ./visualgenome.tar
+
+createdb airline
+pg_restore -v -d airline ./airline.tar
+
+createdb ssb
+pg_restore -v -d ssb ./ssb.tar
+
+createdb credit
+pg_restore -v -d credit ./credit.tar
+
+createdb basketball_men
+pg_restore -v -d basketball_men ./basketball.tar
+
+
+
+
+
+
