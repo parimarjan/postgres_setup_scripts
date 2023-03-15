@@ -44,6 +44,7 @@ perf stat -x, -e ${E} -o ${OUTDIR}stats_ceb_setup.csv bash stats_ceb_setup.sh
 perf stat -x, -e ${E} -o ${OUTDIR}ergast_setup.csv bash ergast_setup.sh
 perf stat -x, -e ${E} -o ${OUTDIR}tpch_setup.csv bash tpch_setup.sh
 perf stat -x, -e ${E} -o ${OUTDIR}zdbs_setup.csv bash zdbs_setup.sh
+perf stat -x, -e ${E} -o ${OUTDIR}stack_setup.csv bash stack_setup.sh
 
 cp ~/postgres_setup_scripts/postgresql.conf $PG_DATA_DIR/
 
