@@ -8,7 +8,7 @@ mkdir -p ~/log
 mkdir -p ~/log/perf
 OUTDIR=~/log/perf/
 
-E=dTLB-loads,iTLB-loads,branch-loads,instructions,cache-references,cpu-clock,task-clock,page-faults,minor-faults,major-faults,cs,cpu-migrations,alignment-faults,emulation-faults,branch-load-misses,branch-loads,bus-cycles,idle-cycles-backend,alignment-faults,cpu_cycles,inst_retired,inst_spec,l1d_cache,ttbr_write_retired
+E=dTLB-loads,iTLB-loads,branch-loads,instructions,cache-references,cpu-clock,task-clock,page-faults,minor-faults,major-faults,cs,cpu-migrations,alignment-faults,emulation-faults,branch-load-misses,branch-loads,bus-cycles,idle-cycles-backend,alignment-faults
 
 #perf stat -x, -e ${E} dd if=/dev/zero of=/dev/null count=1000000
 
