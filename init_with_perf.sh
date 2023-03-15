@@ -1,3 +1,4 @@
+touch ~/.bashrc_exports
 sudo apt-get update
 sudo apt-get install --assume-yes linux-tools-common linux-tools-aws linux-tools-5.15.0-1028-aws
 sudo sh -c 'echo 1 >/proc/sys/kernel/perf_event_paranoid'
@@ -7,7 +8,7 @@ mkdir -p ~/log
 mkdir -p ~/log/perf
 OUTDIR=~/log/perf/
 
-E=dTLB-loads,iTLB-loads,branch-loads,instructions,cache-references,cpu-clock,task-clock,page-faults,minor-faults,major-faults,cs,cpu-migrations,alignment-faults,emulation-faults,branch-load-misses,branch-loads,bus-cycles,idle-cycles-backend,alignment-faults,cpu_cycles,inst_retired,inst_spec,itlb_walk,l1d_cache,op_retired,ttbr_write_retired
+E=dTLB-loads,iTLB-loads,branch-loads,instructions,cache-references,cpu-clock,task-clock,page-faults,minor-faults,major-faults,cs,cpu-migrations,alignment-faults,emulation-faults,branch-load-misses,branch-loads,bus-cycles,idle-cycles-backend,alignment-faults,cpu_cycles,inst_retired,inst_spec,l1d_cache,ttbr_write_retired
 
 #perf stat -x, -e ${E} dd if=/dev/zero of=/dev/null count=1000000
 
