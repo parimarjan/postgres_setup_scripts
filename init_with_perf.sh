@@ -1,3 +1,7 @@
+sudo apt install --assume-yes linux-tools-common linux-tools-aws
+sudo sh -c 'echo 1 >/proc/sys/kernel/perf_event_paranoid'
+sudo sh -c 'echo 0 > /proc/sys/kernel/kptr_restrict'
+
 mkdir -p log
 mkdir -p log/perf
 OUTDIR=~/log/perf/
