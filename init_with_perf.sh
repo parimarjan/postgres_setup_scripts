@@ -1,5 +1,5 @@
 sudo apt-get update
-sudo apt-get install --assume-yes linux-tools-common linux-tools-aws
+sudo apt-get install --assume-yes linux-tools-common linux-tools-aws linux-tools-5.15.0-1028-aws
 sudo sh -c 'echo 1 >/proc/sys/kernel/perf_event_paranoid'
 sudo sh -c 'echo 0 > /proc/sys/kernel/kptr_restrict'
 
