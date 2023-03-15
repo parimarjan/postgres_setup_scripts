@@ -3,8 +3,8 @@ sudo apt-get install --assume-yes linux-tools-common linux-tools-aws linux-tools
 sudo sh -c 'echo 1 >/proc/sys/kernel/perf_event_paranoid'
 sudo sh -c 'echo 0 > /proc/sys/kernel/kptr_restrict'
 
-mkdir -p log
-mkdir -p log/perf
+mkdir -p ~/log
+mkdir -p ~/log/perf
 OUTDIR=~/log/perf/
 
 E=dTLB-loads,iTLB-loads,branch-loads,instructions,cache-references,cpu-clock,task-clock,page-faults,minor-faults,major-faults,cs,cpu-migrations,alignment-faults,emulation-faults,branch-load-misses,branch-loads,bus-cycles,idle-cycles-backend,alignment-faults,cpu_cycles,inst_retired,inst_spec,itlb_walk,l1d_cache,op_retired,ttbr_write_retired
