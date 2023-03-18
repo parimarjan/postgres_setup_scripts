@@ -1,12 +1,18 @@
 #!/usr/bin/env bash
 
-sudo apt-get update
+sudo apt update
 sudo apt install --assume-yes vim python3-pip cmake
 echo "source ~/.bashrc_exports" >> ~/.bashrc
 
 sudo apt install --assume-yes sysstat
 sudo apt install -y --assume-yes stress-ng
 sudo apt -y install zstd python3-pip m4 cmake clang libboost-all-dev
+sudo apt -y install libhdf5-10 libhdf5-serial-dev libhdf5-dev libhdf5-cpp-11 libhdf5-serial-dev libhdf5-dev libhdf5-cpp-11
+
+sudo apt install --assume-yes autoconf
+sudo apt install --assume-yes build-essential libssl-dev libz-dev libsqlite3-dev libcurl4-gnutls-dev libdaemon-dev automake autoconf pkg-config libtool libcppunit-dev libnl-3-dev libnl-cli-3-dev libnl-genl-3-dev libnl-nf-3-dev libnl-route-3-dev libarchive-dev libarchive-dev
+
+export CPATH="/usr/include/hdf5/serial/"
 
 touch ~/.bashrc_exports
 sudo apt-get update
@@ -31,6 +37,10 @@ pip3 install torch
 pip3 install numpy
 pip3 install pandas
 pip3 install --user numpy scipy
+pip3 install psutil
+pip3 install scipy
+pip3 install scikit-learn
+pip3 install nltk
 
 cd ~/
 git clone https://github.com/parimarjan/LatencyCollector.git
