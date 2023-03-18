@@ -21,6 +21,10 @@ mkdir -p ~/log/results/perf
 #git clone https://github.com/parimarjan/learned-cardinalities.git
 #cd learned-cardinalities
 #pip3 install -r requirements_rt.txt
+pip3 install networkx
+pip3 install torch
+pip3 install numpy
+pip3 install pandas
 
 cd ~/
 git clone https://github.com/parimarjan/LatencyCollector.git
