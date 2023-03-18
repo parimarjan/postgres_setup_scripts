@@ -24,7 +24,7 @@ sleep 3
 #bash stack_setup.sh
 #bash tpch_setup2.sh
 #bash tpcds_setup.sh
-bash zdbs_setup.sh
+#bash zdbs_setup.sh
 
 cp ~/postgres_setup_scripts/postgresql.conf $PG_DATA_DIR/
 

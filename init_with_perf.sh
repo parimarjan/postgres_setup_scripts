@@ -1,11 +1,12 @@
 touch ~/.bashrc_exports
-sudo apt-get update
-sudo apt-get install --assume-yes linux-tools-common linux-tools-aws linux-tools-5.15.0-1028-aws
-sudo sh -c 'echo 1 >/proc/sys/kernel/perf_event_paranoid'
-sudo sh -c 'echo 0 > /proc/sys/kernel/kptr_restrict'
+#sudo apt-get update
+#sudo apt-get install --assume-yes linux-tools-common linux-tools-aws linux-tools-5.15.0-1028-aws
+#sudo sh -c 'echo 1 >/proc/sys/kernel/perf_event_paranoid'
+#sudo sh -c 'echo 0 > /proc/sys/kernel/kptr_restrict'
 
-mkdir -p ~/log
-mkdir -p ~/log/perf
+#mkdir -p ~/log
+#mkdir -p ~/log/results/
+#mkdir -p ~/log/results/perf
 OUTDIR=~/log/results/perf/
 
 E=dTLB-loads,iTLB-loads,branch-loads,instructions,cache-references,cpu-clock,task-clock,page-faults,minor-faults,major-faults,cs,cpu-migrations,alignment-faults,emulation-faults,branch-load-misses,branch-loads,bus-cycles,idle-cycles-backend,alignment-faults
@@ -44,7 +45,7 @@ perf stat -x, -e ${E} -o ${OUTDIR}pg_hint.csv ./pg_hint_setup.sh
 #perf stat -x, -e ${E} -o ${OUTDIR}ergast_setup.csv bash ergast_setup.sh
 #perf stat -x, -e ${E} -o ${OUTDIR}tpch_setup.csv bash tpch_setup.sh
 #perf stat -x, -e ${E} -o ${OUTDIR}zdbs_setup.csv bash zdbs_setup.sh
-perf stat -x, -e ${E} -o ${OUTDIR}stack_setup.csv bash stack_setup.sh
+#perf stat -x, -e ${E} -o ${OUTDIR}stack_setup.csv bash stack_setup.sh
 
 cp ~/postgres_setup_scripts/postgresql.conf $PG_DATA_DIR/
 
