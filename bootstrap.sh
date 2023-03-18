@@ -6,12 +6,17 @@ echo "source ~/.bashrc_exports" >> ~/.bashrc
 
 sudo apt install --assume-yes sysstat
 sudo apt install -y --assume-yes stress-ng
+sudo apt -y install zstd python3-pip m4 cmake clang libboost-all-dev
 
 touch ~/.bashrc_exports
 sudo apt-get update
 sudo apt-get install --assume-yes linux-tools-common linux-tools-aws linux-tools-5.15.0-1028-aws
 sudo sh -c 'echo 1 >/proc/sys/kernel/perf_event_paranoid'
 sudo sh -c 'echo 0 > /proc/sys/kernel/kptr_restrict'
+
+#curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+curl https://sh.rustup.rs -sSf | sh -s -- -y
+source $HOME/.cargo/env
 
 mkdir -p ~/log
 mkdir -p ~/log/results/
@@ -25,6 +30,7 @@ pip3 install networkx
 pip3 install torch
 pip3 install numpy
 pip3 install pandas
+pip3 install --user numpy scipy
 
 cd ~/
 git clone https://github.com/parimarjan/LatencyCollector.git
