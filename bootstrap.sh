@@ -10,6 +10,8 @@ sudo apt -y install zstd python3-pip m4 cmake clang libboost-all-dev
 sudo apt -y install libhdf5-10 libhdf5-serial-dev libhdf5-dev libhdf5-cpp-11 libhdf5-serial-dev libhdf5-dev libhdf5-cpp-11
 sudo apt -y install build-essential autoconf automake libpcre3-dev libevent-dev pkg-config zlib1g-dev libssl-dev
 sudo apt -y install python3-virtualenv
+sudo apt -y install redis-server
+sudo apt -y install bonnie++
 
 sudo apt --assume-yes install autoconf
 sudo apt --assume-yes install fio
