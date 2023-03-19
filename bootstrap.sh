@@ -12,10 +12,12 @@ sudo apt -y install build-essential autoconf automake libpcre3-dev libevent-dev 
 sudo apt -y install python3-virtualenv
 sudo apt -y install redis-server
 sudo apt -y install bonnie++
+redis-server &
 
 sudo apt --assume-yes install autoconf
 sudo apt --assume-yes install fio
 sudo apt --assume-yes install build-essential libssl-dev libz-dev libsqlite3-dev libcurl4-gnutls-dev libdaemon-dev automake autoconf pkg-config libtool libcppunit-dev libnl-3-dev libnl-cli-3-dev libnl-genl-3-dev libnl-nf-3-dev libnl-route-3-dev libarchive-dev libarchive-dev
+sudo apt --assume-yes install build-essential autoconf automake libpcre3-dev libevent-dev pkg-config zlib1g-dev libssl-dev
 
 export CPATH="/usr/include/hdf5/serial/"
 
