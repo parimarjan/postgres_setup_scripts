@@ -12,6 +12,7 @@ sudo apt -y install build-essential autoconf automake libpcre3-dev libevent-dev 
 sudo apt -y install python3-virtualenv
 sudo apt -y install redis-server
 sudo apt -y install bonnie++
+sudo apt -y install postgresql-client-common
 redis-server &
 
 sudo apt --assume-yes install autoconf
@@ -57,3 +58,6 @@ pip3 install -r requirements.txt
 cd ~/
 mkdir -p payload/results
 sar -A -o payload/results/sar.log 10 24000 >/dev/null 2>&1 &
+
+## for finding postgresql binaries later on
+export PATH=$PATH:/home/ubuntu/build/bin
