@@ -59,5 +59,8 @@ cd ~/
 mkdir -p payload/results
 sar -A -o payload/results/sar.log 10 24000 >/dev/null 2>&1 &
 
+## for avoiding restart interactive notifications
+sudo sed -i "/#\$nrconf{restart} = 'i';/s/.*/\$nrconf{restart} = 'a';/" /etc/needrestart/needrestart.conf
+
 ## for finding postgresql binaries later on
 export PATH=$PATH:/home/ubuntu/build/bin
