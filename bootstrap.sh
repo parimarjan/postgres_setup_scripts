@@ -3,7 +3,6 @@
 sudo apt update
 sudo apt --assume-yes install vim python3-pip cmake
 sudo apt -y install ffmpeg
-sudo -H pip install --upgrade youtube-dl
 echo "source ~/.bashrc_exports" >> ~/.bashrc
 
 sudo apt --assume-yes install sysstat
@@ -37,6 +36,9 @@ source $HOME/.cargo/env
 mkdir -p ~/log
 mkdir -p ~/log/results/
 mkdir -p ~/log/results/perf
+
+sudo -H pip install --upgrade youtube-dl
+sudo ln -s /usr/bin/python3 /usr/local/bin/python
 
 #cd ~/
 #git clone https://github.com/parimarjan/learned-cardinalities.git
