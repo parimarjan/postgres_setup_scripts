@@ -2,6 +2,8 @@
 
 sudo apt update
 sudo apt --assume-yes install vim python3-pip cmake
+sudo apt -y install ffmpeg
+sudo -H pip install --upgrade youtube-dl
 echo "source ~/.bashrc_exports" >> ~/.bashrc
 
 sudo apt --assume-yes install sysstat
