@@ -16,6 +16,8 @@ sudo apt -y install bonnie++
 sudo apt -y install postgresql-client-common
 redis-server &
 
+bash pg_setup.sh
+
 sudo apt --assume-yes install autoconf
 sudo apt --assume-yes install fio
 sudo apt --assume-yes install build-essential libssl-dev libz-dev libsqlite3-dev libcurl4-gnutls-dev libdaemon-dev automake autoconf pkg-config libtool libcppunit-dev libnl-3-dev libnl-cli-3-dev libnl-genl-3-dev libnl-nf-3-dev libnl-route-3-dev libarchive-dev libarchive-dev
