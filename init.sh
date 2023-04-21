@@ -3,6 +3,9 @@
 sleep 3
 ./bootstrap.sh
 echo "bootstrap done"
+./bootstrap_shell.sh
+echo "bootstrap done"
+
 sleep 3
 ./pg_setup.sh
 echo "postgres setup done"
