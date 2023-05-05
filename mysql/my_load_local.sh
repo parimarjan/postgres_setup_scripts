@@ -1,1 +1,1 @@
-mysql -u root -D imdb --local-infile=1 < test.sql
+mysql -u root -D imdb -p --local-infile=1 < test.sql
