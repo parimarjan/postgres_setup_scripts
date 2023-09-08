@@ -2,7 +2,7 @@
 #!/bin/bash
 
 # Path to the directory containing the CSV files
-CSV_DIR="./"
+CSV_DIR=$1
 
 # Name of the DuckDB database file
 DUCKDB_FILE="imdb.duckdb"
