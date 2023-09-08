@@ -5,9 +5,10 @@
 CSV_DIR=$1
 
 # Name of the DuckDB database file
-DUCKDB_FILE="imdb.duckdb"
+DUCKDB_FILE=$2
 
 for csv_file in $CSV_DIR*.csv; do
+	echo $csv_file
 	# Extract the table name from the CSV filename
 	table_name=$(basename "$csv_file" .csv)
 
