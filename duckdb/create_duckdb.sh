@@ -15,7 +15,7 @@ for csv_file in $CSV_DIR*.csv; do
 	echo "Processing $csv_file into table $table_name"
 
 	# Use duckdb command line to create the table and import the CSV data
-	duckdb "$DUCKDB_FILE" <<EOF
+	/home/ubuntu/duckdb/build/release/duckdb "$DUCKDB_FILE" <<EOF
 	CREATE TABLE "$table_name" AS SELECT * FROM READ_CSV_AUTO('$csv_file');
 EOF
 done
