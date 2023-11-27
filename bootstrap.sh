@@ -10,6 +10,8 @@ sudo apt install -y --assume-yes stress-ng
 touch ~/.bashrc_exports
 sudo apt-get update
 sudo apt-get install --assume-yes linux-tools-common linux-tools-aws linux-tools-5.15.0-1028-aws
+
+## for perf stats
 sudo sh -c 'echo 1 >/proc/sys/kernel/perf_event_paranoid'
 sudo sh -c 'echo 0 > /proc/sys/kernel/kptr_restrict'
 
@@ -29,6 +31,8 @@ pip3 install -r requirements.txt
 
 cd ~/
 mkdir -p payload/results
+
+## sar systat records sytem logs
 sar -A -o payload/results/sar.log 10 24000 >/dev/null 2>&1 &
 
 git clone https://github.com/parimarjan/interbench.git
