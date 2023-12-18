@@ -11,6 +11,7 @@ sudo apt install --assume-yes libmysqlclient-dev
 sudo apt install --assume-yes mysql-server
 
 pip3 install mysqlclient
+pip3 install mysql-connector
 sudo systemctl start mysql
 
 #echo "export PATH=$PATH:/home/ubuntu/duckdb/build/release" >> ~/.bashrc
