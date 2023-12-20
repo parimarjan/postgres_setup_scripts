@@ -6,7 +6,8 @@ echo "bootstrap done"
 ./bootstrap_shell.sh
 echo "bootstrap done"
 
-pip3 install duckdb
+#pip3 install duckdb
+pip3 install duckdb==0.8.0
 
 cd ~/
 git clone https://github.com/duckdb/duckdb.git
