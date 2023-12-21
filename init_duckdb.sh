@@ -21,6 +21,7 @@ source ~/.bashrc
 cd ~/postgres_setup_scripts
 
 bash duckdb/imdb.sh
-bash duckdb/tpch.sh
+#bash duckdb/tpch.sh
+bash duckdb/zdbs.sh
 
 #bash duckdb/stack.sh
