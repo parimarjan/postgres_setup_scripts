@@ -33,3 +33,6 @@ echo "MySQL user 'ubuntu'@'localhost' created with all privileges."
 cd mysql
 bash imdb.sh
 bash my_load_local.sh
+cd ..
+bash mysql/zdbs_load.sh
+
